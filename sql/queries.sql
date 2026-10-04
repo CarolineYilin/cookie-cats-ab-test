@@ -10,5 +10,5 @@ SELECT COUNT(*) AS total_rows,
 
 SELECT version, COUNT(*) FROM players
 WHERE sum_gamerounds =0
--- comment number of players in each 
+-- comment number of players in each version. 
 SELECT COUNT(userid) FROM players GROUP by version
