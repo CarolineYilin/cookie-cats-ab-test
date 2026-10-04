@@ -20,7 +20,8 @@
   5. Engagement comparison (Mann-Whitney U)
   
   ## Results
-  _To be completed._
+  Outlier removed: gate_30 now has 44,699 players with a max of 2,961 rounds. The gate_30 average dropped from 52.46 to 51.34, now almost identical to gate_40's 51.30.
+  Retention is basically unchanged by the cleaning: 1-day 44.8% vs 44.2%; 7-day 19.0% vs 18.2%.
   
   ## Recommendation
   _To be completed._
