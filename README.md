@@ -1,6 +1,6 @@
 # Cookie Cats A/B Test: Does Moving the Gate Affect Player Retention?
   
-  # Summary
+  ## Summary
   I looked at data from about 90,000 players of a mobile game to see if delaying a "wait gate" from level 30 to level 40 would keep more players coming back. After cleaning the data with SQL and testing the results with both a z-test and 10,000 bootstrap simulations, I found the opposite of what the change was hoping for: moving the gate later lowered 7-day retention from 19.0% to 18.2%, a difference that was very unlikely to be due to chance. The 1-day difference was small and not significant. Because even a small drop adds up to many lost players for a large game, I recommended keeping the gate at level 30.
   
   ## Question
@@ -10,6 +10,7 @@
   - 7-day retention: 19.0% vs 18.2%, z-test p = 0.0016, 95% CI 0.31–1.33 points
   - Bootstrap (10,000 resamples): 95% CI 0.32–1.34 points; gate_30 higher in >99.9% of resamples
   - 1-day retention: 44.8% vs 44.2%, p = 0.07 (not significant)
+  - - Game rounds played (Mann-Whitney U test, used because the data is heavily skewed): p = 0.051, not significant (borderline); medians 17 vs 16
    ![Bootstrap distribution](figures/bootstrap_7day.png)
   
   ## Data cleaning
@@ -22,11 +23,6 @@
   3. Hypothesis tests on 1-day and 7-day retention (two-proportion z-test)
   4. Bootstrap confidence intervals
   5. Engagement comparison (Mann-Whitney U)
-  
-  ## Results
-  Outlier removed: gate_30 now has 44,699 players with a max of 2,961 rounds. The gate_30 average dropped from 52.46 to 51.34, now almost identical to gate_40's 51.30.
-  Retention is basically unchanged by the cleaning: 1-day 44.8% vs 44.2%; 7-day 19.0% vs 18.2%.
-  - Game rounds played (Mann-Whitney U test, used because the data is heavily skewed): p = 0.051, not significant (borderline); medians 17 vs 16
   
   ## Recommendation
   Keep the gate at level 30.
