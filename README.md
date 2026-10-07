@@ -26,6 +26,7 @@
   ## Results
   Outlier removed: gate_30 now has 44,699 players with a max of 2,961 rounds. The gate_30 average dropped from 52.46 to 51.34, now almost identical to gate_40's 51.30.
   Retention is basically unchanged by the cleaning: 1-day 44.8% vs 44.2%; 7-day 19.0% vs 18.2%.
+  - Game rounds played (Mann-Whitney U test, used because the data is heavily skewed): p = 0.051, not significant (borderline); medians 17 vs 16
   
   ## Recommendation
   Keep the gate at level 30.
