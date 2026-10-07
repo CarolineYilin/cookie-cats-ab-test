@@ -6,10 +6,11 @@
   ## Question
   Does moving the first in-game gate from level 30 to level 40 change player retention?
   
-  ## Data
-  - Source: Kaggle, "Mobile Games A/B Testing - Cookie Cats" (download separately; not included in this repo)
-  - 90,189 players, randomly assigned to `gate_30` (control) or `gate_40` (treatment)
-  - Columns: userid, version, sum_gamerounds, retention_1, retention_7
+  ## Result
+  - 7-day retention: 19.0% vs 18.2%, z-test p = 0.0016, 95% CI 0.31–1.33 points
+  - Bootstrap (10,000 resamples): 95% CI 0.32–1.34 points; gate_30 higher in >99.9% of resamples
+  - 1-day retention: 44.8% vs 44.2%, p = 0.07 (not significant)
+   ![Bootstrap distribution](figures/bootstrap_7day.png)
   
   ## Data cleaning
   - No duplicate user IDs
@@ -27,10 +28,10 @@
   Retention is basically unchanged by the cleaning: 1-day 44.8% vs 44.2%; 7-day 19.0% vs 18.2%.
   
   ## Recommendation
-  _To be completed._
+  Keep the gate at level 30.
   
   ## Limitations
-  _To be completed._
+  The test wasn't completely flawless. The groups weren't an exact 50/50 split (49.6% vs 50.4%, chi-square p ≈ 0.009), which could mean a small problem in how players were assigned, so the results should be read with that in mind. I also removed one player with 49,854 game rounds — likely a bot or data error — who would have skewed the numbers. Finally, I only had short-term retention (1-day and 7-day). A real gaming company would also want to track longer-term habits, like 30-day retention, and how much money players actually spend.
   
   ## How to run
   1. Download the dataset from Kaggle into `data/`
