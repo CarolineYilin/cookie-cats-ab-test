@@ -10,7 +10,7 @@
   - 7-day retention: 19.0% vs 18.2%, z-test p = 0.0016, 95% CI 0.31–1.33 points
   - Bootstrap (10,000 resamples): 95% CI 0.32–1.34 points; gate_30 higher in >99.9% of resamples
   - 1-day retention: 44.8% vs 44.2%, p = 0.07 (not significant)
-  - - Game rounds played (Mann-Whitney U test, used because the data is heavily skewed): p = 0.051, not significant (borderline); medians 17 vs 16
+  - Game rounds played (Mann-Whitney U test, used because the data is heavily skewed): p = 0.051, not significant (borderline); medians 17 vs 16
    ![Bootstrap distribution](figures/bootstrap_7day.png)
   
   ## Data cleaning
