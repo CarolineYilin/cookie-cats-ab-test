@@ -1,5 +1,8 @@
 # Cookie Cats A/B Test: Does Moving the Gate Affect Player Retention?
   
+  # Summary
+  I looked at data from about 90,000 players of a mobile game to see if delaying a "wait gate" from level 30 to level 40 would keep more players coming back. After cleaning the data with SQL and testing the results with both a z-test and 10,000 bootstrap simulations, I found the opposite of what the change was hoping for: moving the gate later lowered 7-day retention from 19.0% to 18.2%, a difference that was very unlikely to be due to chance. The 1-day difference was small and not significant. Because even a small drop adds up to many lost players for a large game, I recommended keeping the gate at level 30.
+  
   ## Question
   Does moving the first in-game gate from level 30 to level 40 change player retention?
   
